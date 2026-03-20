@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Jasa Pembuatan Website Profesional</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="favicon-removebg-preview.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-box">
+            <div class="loader-ring">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <span class="loader-text">Memuat</span>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none">
+                        <path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 4V36M4 12L36 28M36 12L4 28" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">
+                    KAREL Smart Web <br>
+                    <strong>STUDIO</strong>
+                </span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Beranda</a>
+                <a href="layanan.html" class="nav-link active">Layanan</a>
+                <a href="index.html#keuntungan" class="nav-link">Keuntungan</a>
+                <a href="index.html#tentang" class="nav-link">Tentang</a>
+                <a href="index.html#kontak" class="nav-link nav-cta">Hubungi Kami</a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="page-hero-content reveal">
+                <span class="section-tag">Pilih Paket</span>
+                <h1>Layanan <span class="text-gradient">Premium</span></h1>
+                <p>Solusi lengkap pembuatan website dengan kualitas terbaik dan harga terjangkau</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-head">
+                        <span class="pricing-badge">Starter</span>
+                        <h3>Landing Page</h3>
+                        <p>Cocok untuk promosi produk atau event</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-curr">Rp</span>
+                        <span class="price-val">60K - 100K</span>
+                        <span class="price-period">mulai dari</span>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>1 Halaman</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Desain Responsif</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Form Kontak</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Integrasi WhatsApp</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>SEO Dasar</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>1x Revisi</span></li>
+                    </ul>
+                    <a href="https://wa.me/6283179325455?text=Halo,%20Apakah%20ini%20jasa%20pembuatan%20website?%20Saya%20tertarik%20paket%20Landing%20Page" target="_blank" class="btn btn-outline">Pilih Paket</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card featured reveal">
+                    <div class="featured-ribbon">Populer</div>
+                    <div class="pricing-head">
+                        <span class="pricing-badge pro">Professional</span>
+                        <h3>Company Profile</h3>
+                        <p>Ideal untuk bisnis profesional</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-curr">Rp</span>
+                        <span class="price-val">120K - 250K</span>
+                        <span class="price-period">mulai dari</span>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Hingga 5 Halaman</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Desain Premium</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Panel Admin</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Gallery & Portofolio</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>SEO Optimized</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>3x Revisi</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Free Domain .com (1 tahun)</span></li>
+                    </ul>
+                    <a href="https://wa.me/6283179325455?text=Halo,%20Apakah%20ini%20jasa%20pembuatan%20website?%20Saya%20tertarik%20paket%20Company%20Profile" target="_blank" class="btn btn-primary">Pilih Paket</a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-head">
+                        <span class="pricing-badge enterprise">Enterprise</span>
+                        <h3>Toko Online</h3>
+                        <p>Siap jual beli online lengkap</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-curr">Rp</span>
+                        <span class="price-val">500K</span>
+                        <span class="price-period">mulai dari</span>
+                    </div>
+                    <ul class="pricing-list">
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Halaman Unlimited</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Katalog Produk</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Keranjang Belanja</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Payment Gateway</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Laporan Penjualan</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Unlimited Revisi</span></li>
+                        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span>Free Domain + Hosting</span></li>
+                    </ul>
+                    <a href="https://wa.me/6283179325455?text=Halo,%20Apakah%20ini%20jasa%20pembuatan%20website?%20Saya%20tertarik%20paket%20Toko%20Online" target="_blank" class="btn btn-outline">Pilih Paket</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag reveal">Proses Kerja</span>
+                <h2 class="section-title reveal">
+                    Bagaimana Kami<br><span class="text-gradient">Bekerja</span>
+                </h2>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card reveal">
+                    <div class="process-num">01</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Konsultasi</h3>
+                    <p>Diskusikan kebutuhan dan tujuan website Anda bersama tim kami secara gratis.</p>
+                </div>
+                <div class="process-card reveal">
+                    <div class="process-num">02</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3>Perencanaan</h3>
+                    <p>Penyusunan struktur, desain, dan fitur website sesuai kebutuhan bisnis.</p>
+                </div>
+                <div class="process-card reveal">
+                    <div class="process-num">03</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Pengembangan</h3>
+                    <p>Proses pembuatan website dengan update progress berkala kepada klien.</p>
+                </div>
+                <div class="process-card reveal">
+                    <div class="process-num">04</div>
+                    <div class="process-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>Launch</h3>
+                    <p>Pengujian, revisi, dan peluncuran website Anda secara profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Addons -->
+    <section class="addons">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag reveal">Layanan Tambahan</span>
+                <h2 class="section-title reveal">
+                    Fitur <span class="text-gradient">Add-ons</span>
+                </h2>
+            </div>
+
+            <div class="addons-grid">
+                <div class="addon-card reveal">
+                    <div class="addon-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Pembuatan Konten</h3>
+                    <p>Penulisan konten profesional untuk website Anda</p>
+                    <span class="addon-price">Mulai Rp 30K</span>
+                </div>
+                <div class="addon-card reveal">
+                    <div class="addon-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3>Maintenance Bulanan</h3>
+                    <p>Perawatan dan update rutin website</p>
+                    <span class="addon-price">Rp 80K/bulan</span>
+                </div>
+                <div class="addon-card reveal">
+                    <div class="addon-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Optimasi mesin pencari untuk ranking lebih tinggi</p>
+                    <span class="addon-price">Mulai Rp 100K</span>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-tag reveal">FAQ</span>
+                <h2 class="section-title reveal">
+                    Pertanyaan<br><span class="text-gradient">Umum</span>
+                </h2>
+            </div>
+
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Berapa lama waktu pembuatan website?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Waktu pengerjaan tergantung kompleksitas proyek. Landing page 3-5 hari kerja, company profile 7-14 hari kerja, dan toko online 14-21 hari kerja.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah bisa request desain custom?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tentu! Semua desain dikerjakan custom sesuai branding bisnis Anda. Tidak ada template yang dipakai.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana sistem pembayaran?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>DP 50% di awal, pelunasan setelah website selesai. Kami menerima transfer bank dan e-wallet.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apakah ada garansi?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, garansi 30 hari untuk perbaikan bug dan error setelah launching. Tersedia juga layanan maintenance bulanan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <div class="cta-bg">
+                    <div class="cta-shape shape-1"></div>
+                    <div class="cta-shape shape-2"></div>
+                </div>
+                <div class="cta-content">
+                    <h2>Siap Memulai Proyek?</h2>
+                    <p>Konsultasikan kebutuhan Anda sekarang!</p>
+                    <a href="https://wa.me/6283179325455?text=Halo,%20Apakah%20ini%20jasa%20pembuatan%20website?" target="_blank" class="btn btn-wa">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Chat WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none">
+                                <path d="M20 4L36 12V28L20 36L4 28V12L20 4Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 4V36M4 12L36 28M36 12L4 28" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">KAREL Smart Web </span>
+                    </a>
+                    <p>Solusi website profesional untuk membantu bisnis Anda berkembang di era digital.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="layanan.html">Company Profile</a></li>
+                        <li><a href="layanan.html">Toko Online</a></li>
+                        <li><a href="layanan.html">Landing Page</a></li>
+                        <li><a href="layanan.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="index.html#keuntungan">Keuntungan</a></li>
+                        <li><a href="index.html#tentang">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p>Jl. Sungai Mati, Perumahan Sei Indah blok Anggrek no 22, Kec.Brohol, Kel.Bajenis, Kota Tebing Tinggi, Sumatera Utara</p>
+                    <p>+62 831-7932-5455</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KAREL Smart Studio Studio. Dilindungi Hak Cipta.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
